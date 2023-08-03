@@ -1,6 +1,6 @@
 import './Banner.css'
 
-function Banner(){
+export const Banner = () => {
 //  Isso é um JSX - parece um HTML mas não é.
 // é como o react interpreta e converte para o DOM.
     return(
@@ -10,4 +10,4 @@ function Banner(){
  )
 }
 
-export default Banner
+
