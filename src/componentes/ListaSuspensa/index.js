@@ -1,11 +1,12 @@
 import './ListaSuspensa.css'
 
 const ListaSuspensa = (props) => {
-return(
+
+    return(
     <div>
         <label>{props.label}</label>
         <select>
-            <option></option>
+            {props.itens.map(item => <option>{item}</option>)}
         </select>
     </div>
 )
