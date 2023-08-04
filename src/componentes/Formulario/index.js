@@ -4,7 +4,6 @@ import ListaSuspensa from "../ListaSuspensa";
 import "./Formulario.css";
 
 const Formulario = () => {
-  
   const times = [
     "Programação",
     "Front-End",
@@ -12,7 +11,7 @@ const Formulario = () => {
     "Devops",
     "Ux e Design",
     "Mobile",
-    "Inocação e Gestão"
+    "Inocação e Gestão",
   ];
 
   return (
@@ -23,7 +22,7 @@ const Formulario = () => {
         <CampoTexto label="Cargo" placeholder="Digite seu cargo" />
         <CampoTexto label="Imagem" placeholder="Digite o endereço da imagem" />
         <ListaSuspensa label="Time" itens={times} />
-        <Botao texto="Criar Card"/>
+        <Botao>Criar Card</Botao>
       </form>
     </section>
   );
