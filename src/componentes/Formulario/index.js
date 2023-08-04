@@ -4,16 +4,16 @@ import "./Formulario.css";
 
 const Formulario = () => {
   
-  const times = () => {
-    'Programação',
-    'Front-End',
-    'Data Science',
-    'Devops',
-    'Ux e Design',
-    'Mobile',
-    'Inocação e Gestão'
-  }
-  
+  const times = [
+    "Programação",
+    "Front-End",
+    "Data Science",
+    "Devops",
+    "Ux e Design",
+    "Mobile",
+    "Inocação e Gestão"
+  ];
+
   return (
     <section className="formulario">
       <form>
@@ -21,7 +21,7 @@ const Formulario = () => {
         <CampoTexto label="Nome" placeholder="Digite seu nome" />
         <CampoTexto label="Cargo" placeholder="Digite seu cargo" />
         <CampoTexto label="Imagem" placeholder="Digite o endereço da imagem" />
-        <ListaSuspensa itens={times}/>
+        <ListaSuspensa label="Time" itens={times} />
       </form>
     </section>
   );
