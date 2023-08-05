@@ -1,16 +1,22 @@
-import './CampoTexto.css'
+import "./CampoTexto.css";
 
 //é igual a function CampoTexto(){}
 export const CampoTexto = (props) => {
-    
-    const placeholderModificada = `${props.placeholder}...`
-    
-    return (
-        <div className="campo-texto">
-            <label>{props.label}</label>
-            <input placeholder={placeholderModificada}></input>
-        </div>
-        
-    )
-}
+  const placeholderModificada = `${props.placeholder}...`;
 
+  const aoDigitado = (evento) => {
+    props.aoAlterado(evento.target.value);
+  };
+
+  return (
+    <div className="campo-texto">
+      <label>{props.label}</label>
+      <input
+        value={props.valor}
+        onChange={aoDigitado}
+        required={props.obrigatorio}
+        placeholder={placeholderModificada}
+      ></input>
+    </div>
+  );
+};
